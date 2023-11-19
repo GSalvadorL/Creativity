@@ -1,0 +1,514 @@
+Es algo muy sencillo, aunque resultó ser un poco laborioso. 
+
+Se trata de un código en Python para llevar el seguimiento a los puntos de un game en tenis o en pádel.
+
+¡A continuación mi tutorial!
+
+Primero que todo, habría que definir un equipo ROJO y un equipo AZUL, en caso de dobles en tenis o una partida de pádel.
+
+**Las variables deben ser “Rojo” o “Azul”. Básicamente son las únicas dos posibles respuestas a capturar. No se necesita más.**
+
+¡Empezemos!
+
+Primero debemos definir quién tiene el saque.
+
+**saque = input('¿Quién saca? -> ')**
+
+Registramos la PRIMERA anotación a través del siguiente código.
+**anotacion = input('¿Quién anotó primero? ->  ')
+if saque == 'rojo' and anotacion == 'rojo':
+print('Marcador:15-0')
+elif saque == 'rojo' and anotacion == 'azul':
+print('Marcador: 0-15')
+elif saque == 'azul' and anotacion == 'azul':
+print('Marcador: 15-0')
+elif saque == 'azul' and anotacion == 'rojo':
+print('Marcador: 0-15')**
+
+Registramos la SEGUNDA anotación a través del siguiente código.
+
+**_2anotacion = input('¿Quién anotó el 2do. punto? -> ')
+if saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo':
+print('Marcador: 30-0')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul':
+print('Marcador 15-15')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo':
+print('Marcador 15-15')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'azul':
+print('Marcador 0-30')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo':
+print('Marcador 0-30')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul':
+print('Marcador 15-15')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo':
+print('Marcador 15-15')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul':
+print('Marcador 30-0')**
+
+Registramos la TERCERA anotación a través del siguiente código.
+
+**_3anotacion = input('¿Quién anotó el 3er. punto?-> ')
+if saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul':
+print('Marcador: 0-40')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo':
+print('Marcador 15-30')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul':
+print('Marcador 15-30')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo':
+print('Marcador 40-0')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul':
+print('Marcador 30-15')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul':
+print('Marcador 15-30')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo':
+print('Marcador 30-15')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo':
+print('Marcador 0-40')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul':
+print('Marcador 15-30')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo':
+print('Marcador 15-30')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul':
+print('Marcador 40-0')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo':
+print('Marcador 30-15')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo':
+print('Marcador 15-30')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul':
+print('Marcador 30-15')**
+
+Registramos la CUARTA Y POSIBLEMENTE ÚLTIMA anotación a través del siguiente código.
+
+**_4anotacion = input('¿Quién anotó el 4to. punto->? ')**
+
+**if saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo':
+print('Marcador: 15-40')
+if saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo':
+print('Marcador 30-30')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul':
+print('Marcador 15-40')**
+
+**elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo':
+print('Marcador 30-30')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul':
+print('Marcador 15-40')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'rojo' :
+print('Gana game rojo')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul' :
+print('Marcador 40-15')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo':
+print('Marcador 40-15')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul':
+print('Marcador 30-30')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo':
+print('Marcador 30-30')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'azul':
+print('Marcador 15-40')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo':
+print('Marcador 40-15')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul':
+print('Marcador 30-30')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul':
+print('Marcador 15-40')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo':
+print('Marcador 15-40')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul':
+print('Marcador 30-30')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo':
+print('Marcador 15-40')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul':
+print('Marcador 30-30')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo':
+print('Marcador 40-15')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo':
+print('Marcador 30-30')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul':
+print('Marcador 40-15')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'rojo':
+print('Marcador 15-40')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul':
+print('Marcador 30-30')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo':
+print('Marcador 30-30')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul':
+print('Marcador 40-15')**
+
+Registramos la QUINTA Y POSIBLEMENTE ÚLTIMA anotación a través del siguiente código.
+
+**_5anotacion = input('¿Quién anotó el 5to. punto? -> ')**
+
+**if saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'rojo':
+print('Marcador: 30-40')**
+
+**elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo' and _5anotacion == 'rojo':
+print('Marcador 40-30')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul' and _5anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'rojo':
+print('Marcador 40-30')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'azul':
+print('Marcador 30-40')**
+
+**elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'rojo':
+print('Marcador 30-40')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul' :
+print('Marcador 40-30')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul' and _5anotacion == 'rojo' :
+print('Gana game rojo')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul' and _5anotacion == 'azul':
+print('Marcador 40-30')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo':
+print('Gana game rojo')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'azul':
+print('Marcador 40-30')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'azul':
+print('Marcador 30-40')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul'and _5anotacion == 'rojo':
+print('Marcador 40-30')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'rojo':
+print('Marcador 40-30')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'azul':
+print('Marcador 40-30')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'azul'and _5anotacion == 'azul':
+print('Gana game azul')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'azul'and _5anotacion == 'rojo':
+print('Marcador 30-40')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'azul':
+print('Marcador 40-30')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul':
+print('Marcador 30-40')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo':
+print('Marcador 40-30')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul':
+print('Marcador 30-40')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'azul':
+print('Marcador 40-30')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'rojo':
+print('Gana game rojo')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'rojo':
+print('Marcador 40-30')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'azul':
+print('Marcador 30-40')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'azul':
+print('Marcador 30-40')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'rojo':
+print('Gana game rojo')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul':
+print('Marcador 40-30')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul' and _5anotacion == 'rojo':
+print('Marcador 30-40')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'rojo':
+print('Marcador 40-30')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'azul':
+print('Marcador 40-30')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'rojo':
+print('Marcador 30-40')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo':
+print('Marcador 40-30')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul':
+print('Gana game azul')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo':
+print('Marcador 40-30')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'azul':
+print('Marcador 30-40')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul':
+print('Marcador 40-30')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo':
+print('Marcador 30-40')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'rojo':
+print('Marcador 30-40')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'azul':
+print('Marcador 40-30')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul'and _5anotacion == 'azul':
+print('Gana game azul')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul'and _5anotacion == 'rojo':
+print('Marcador 40-30')**
+
+Registramos la SEXTA Y POSIBLEMENTE ÚLTIMA anotación a través del siguiente código. Aquí forzosamente se habrá llegado a un Deuce o que alguno de los dos equipos haya ganado el game.
+
+**_6anotacion = input('¿Quién anotó el 6to. punto? -> ')**
+
+**if saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Marcador: 40-40. Deuce')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'rojo' and _6anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'rojo' and _6anotacion == 'azul':
+print('Marcador 40-40.Deuce')**
+
+**elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'rojo'and _6anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'rojo'and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'azul' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'azul'and _6anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'rojo'and _6anotacion == 'azul':
+print('Gana game azul')
+elif saque == 'rojo' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul'and _6anotacion == 'rojo' :
+print('Gana game rojo')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul'and _6anotacion == 'azul' :
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul' and _5anotacion == 'azul' and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul' and _5anotacion == 'azul' and _6anotacion == 'rojo':
+print('Gana game rojo')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul' and _5anotacion == 'azul'  and _6anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul' and _5anotacion == 'azul' and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'azul'and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'azul'and _6anotacion == 'rojo':
+print('Gana game rojo')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'azul' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'azul' and _6anotacion == 'azul' and _6anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul'and _5anotacion == 'rojo' and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul'and _5anotacion == 'rojo'and _6anotacion == 'rojo':
+print('Gana game rojo')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'rojo' and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'azul'and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'azul' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'azul'and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'azul'and _5anotacion == 'rojo' and _6anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'azul' and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'azul' and _6anotacion == 'rojo':
+print('Gana game rojo')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul' and _6anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo' and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')
+elif saque == 'rojo' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Marcador 40-30')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul'and _6anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul' and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'azul' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo' and _5anotacion == 'azul' and _6anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'rojo' and _6anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'azul' and _6anotacion == 'azul':
+print('Gana game azul')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul' and _5anotacion == 'azul' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'azul'and _6anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'azul'and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul'and _6anotacion == 'azul':
+print('Gana game azul')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul' and _5anotacion == 'rojo'and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul' and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Gana game rojo')**
+
+**elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul' and _5anotacion == 'rojo'and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')
+elif saque == 'azul' and anotacion == 'rojo' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul' and _5anotacion == 'rojo'and _6anotacion == 'rojo':
+print('Gana game rojo')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'rojo' and _6anotacion == 'azul':
+print('Gana game azul')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'azul' and _6anotacion == 'azul':
+print('Gana game azul')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'azul'and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'rojo'and _6anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'rojo'and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo'and _6anotacion == 'azul':
+print('Gana game azul')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo' and _6anotacion == 'azul':
+print('Gana game azul')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'azul' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'azul' and _6anotacion == 'rojo':
+print('Gana game rojo')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'rojo'and _5anotacion == 'azul' and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul' and _6anotacion == 'azul':
+print('Gana game azul')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'azul' and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo' and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'rojo' and _4anotacion == 'azul'and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Gana game rojo')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'rojo' and _6anotacion == 'azul':
+print('Marcador 40-40. Deuce')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'rojo' and _6anotacion == 'rojo':
+print('Gana game rojo')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'azul'and _6anotacion == 'azul':
+print('Gana game azul')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'rojo'and _5anotacion == 'azul'and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')**
+
+**elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul'and _5anotacion == 'rojo'and _6anotacion == 'azul':
+print('Gana game azul')
+elif saque == 'azul' and anotacion == 'azul' and _2anotacion == 'rojo' and _3anotacion == 'azul' and _4anotacion == 'azul'and _5anotacion == 'rojo'and _6anotacion == 'rojo':
+print('Marcador 40-40. Deuce')**
+
+Para la SÉPTIMA y OCTAVA anotación, ocupé un random y un while con un break
+
+Si el juego continúa hasta acá, es porque el game está en Deuce. 
+
+En el SÉPTIMA anotación, nuevamente, nadie puede ganar el game, pero se definirá una ventaja.
+
+En la OCTAVA se podrá capitalizar la ventaja para ganar el game.
+
+El random hará que el propio programa defina quién anotó en la SÉPTIMA y en la OCTAVA anotación, primeramente; o quién anotó en el Deuce y en la Ventaja, ya para llevarse el game.
+
+Como se puede dar el caso en el que en la OCTAVA anotación, quien no lleve la ventaja, se lleve el punto, el juego regresará a Deuce. Por ende, es posible que haya infinitos Deuce. En Python se podrán imprimir la cantidad de Deuce que se necesitaron para definir un game, según el random del programa.
+
+Por eso nos ayudamos del while, que hará repetir el Deuce y la Ventaja, hasta que algún equipo logre llevarse los dos puntos seguidos.
+
+Definí un break para el while, que se activará para cuando la condición de la SEPTIMA y OCTAVA anotación sea que un mismo equipo haya anotado.
+
+Aquí lo que sigue del código:
+
+**import random
+Deuce = 1
+rojo_wins = 0
+azul_wins = 0
+while True:
+print('*'*10)
+print('Deuce',Deuce)
+print('*'*10)**
+
+**_7anotacion_deuce = ('rojo','azul')
+_7anotacion_aleatorio = random.choice(_7anotacion_deuce)
+print('Ventaja --> ',_7anotacion_aleatorio)**
+
+**_8anotacion_ventaja = ('rojo','azul')
+_8anotacion_aleatorio = random.choice(_8anotacion_ventaja)
+print('Siguiente punto --> ',_8anotacion_aleatorio)**
+
+**if _7anotacion_aleatorio == 'rojo' and _8anotacion_aleatorio == 'rojo':
+print('Gana game rojo')
+rojo_wins += 1
+elif _7anotacion_aleatorio == 'azul' and _8anotacion_aleatorio == 'azul':
+print('Gana game azul')
+azul_wins += 1**
+
+**if rojo_wins == 1:
+break
+if  azul_wins == 1:
+break
+Deuce += 1**
+
+¡Espero se hayan entretenido!
